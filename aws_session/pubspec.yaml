@@ -1,0 +1,27 @@
+name: aws_session
+description: A wrapper for clear session via aws mobile client.
+version: 0.0.1
+homepage: https://github.com/autthapol-k/aws-session
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  aws_session_platform_interface: ^0.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.autthapol.aws_session
+        pluginClass: AwsSessionPlugin
+      ios:
+        pluginClass: AwsSessionPlugin
