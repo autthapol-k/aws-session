@@ -3,6 +3,7 @@ package com.autthapol.aws_session
 import android.content.Context
 import androidx.annotation.NonNull
 import com.amazonaws.internal.keyvaluestore.AWSKeyValueStore
+import com.amazonaws.mobile.client.AWSMobileClient
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -26,16 +27,7 @@ class AwsSessionPlugin : FlutterPlugin, MethodCallHandler {
     @Suppress("UNCHECKED_CAST")
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         if (call.method == "clearSession") {
-            val arguments = call.arguments as? Map<String, String>
-            val clientId = arguments?.get("clientId")
-            val userId = arguments?.get("userId")
-
-            if (clientId != null && userId != null) {
-                result.success(clearSession(clientId, userId))
-            } else {
-                result.error("Invalid Parameter", "clientId and userId cannot be null.", null)
-            }
-
+            result.success(clearSession())
         } else {
             result.notImplemented()
         }
@@ -46,11 +38,14 @@ class AwsSessionPlugin : FlutterPlugin, MethodCallHandler {
     }
 
 
-    private fun clearSession(clientId: String, userId: String): Boolean {
+    private fun clearSession(): Boolean {
+        val client = AWSMobileClient.getInstance()
         val awsKeyValueStore = AWSKeyValueStore(context, "CognitoIdentityProviderCache", true)
+        val clientId = client.configuration.optJsonObject("CognitoUserPool").getString("AppClientId")
+        val userId = client.username
+
         val csiIdTokenKey = String.format("CognitoIdentityProvider.%s.%s.idToken", clientId, userId)
         val csiAccessTokenKey = String.format("CognitoIdentityProvider.%s.%s.accessToken", clientId, userId)
-
         awsKeyValueStore.put(csiIdTokenKey, "")
         awsKeyValueStore.put(csiAccessTokenKey, "")
 
