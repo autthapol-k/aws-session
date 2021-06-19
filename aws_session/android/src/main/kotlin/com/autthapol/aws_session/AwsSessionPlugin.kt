@@ -23,8 +23,6 @@ class AwsSessionPlugin : FlutterPlugin, MethodCallHandler {
         channel.setMethodCallHandler(this)
     }
 
-
-    @Suppress("UNCHECKED_CAST")
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         if (call.method == "clearSession") {
             result.success(clearSession())
@@ -36,7 +34,6 @@ class AwsSessionPlugin : FlutterPlugin, MethodCallHandler {
     override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
         channel.setMethodCallHandler(null)
     }
-
 
     private fun clearSession(): Boolean {
         val client = AWSMobileClient.getInstance()

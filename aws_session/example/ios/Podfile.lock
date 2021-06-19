@@ -2,18 +2,18 @@ PODS:
   - aws_session (0.0.1):
     - AWSMobileClient
     - Flutter
-  - AWSAuthCore (2.23.2):
-    - AWSCore (= 2.23.2)
-  - AWSCognitoIdentityProvider (2.23.2):
-    - AWSCognitoIdentityProviderASF (= 2.23.2)
-    - AWSCore (= 2.23.2)
-  - AWSCognitoIdentityProviderASF (2.23.2)
-  - AWSCore (2.23.2)
-  - AWSMobileClient (2.23.2):
-    - AWSAuthCore (= 2.23.2)
-    - AWSCognitoIdentityProvider (= 2.23.2)
-    - AWSCognitoIdentityProviderASF (= 2.23.2)
-    - AWSCore (= 2.23.2)
+  - AWSAuthCore (2.24.2):
+    - AWSCore (= 2.24.2)
+  - AWSCognitoIdentityProvider (2.24.2):
+    - AWSCognitoIdentityProviderASF (= 2.24.2)
+    - AWSCore (= 2.24.2)
+  - AWSCognitoIdentityProviderASF (2.24.2)
+  - AWSCore (2.24.2)
+  - AWSMobileClient (2.24.2):
+    - AWSAuthCore (= 2.24.2)
+    - AWSCognitoIdentityProvider (= 2.24.2)
+    - AWSCognitoIdentityProviderASF (= 2.24.2)
+    - AWSCore (= 2.24.2)
   - Flutter (1.0.0)
 
 DEPENDENCIES:
@@ -36,11 +36,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   aws_session: cfa885278a992f5fad215e63bfaf6b1bb81e6d41
-  AWSAuthCore: 59770d4c2c1b3dbb183b95d1867e3584b4816e54
-  AWSCognitoIdentityProvider: 5bd6988ea7c8f9ee43151e19bdd8e803558ad45f
-  AWSCognitoIdentityProviderASF: 30ccb19228b6e743805bf15a72278ca9f399bc21
-  AWSCore: 70f79e95ee30f8eefa7122391d76ace516778f22
-  AWSMobileClient: 54fd215e76e34a8edb3cb1199788a69543cebc95
+  AWSAuthCore: d2cb921db598ea03d67284977a3c691e9a1aee83
+  AWSCognitoIdentityProvider: f9d68c563718fa5aa76e077752df06c73810efba
+  AWSCognitoIdentityProviderASF: 21681469334e286df6e5470f3cbab3b10edbf818
+  AWSCore: 08a61ac2b1d98b2d43f59ee40c4bd68e58dfdea3
+  AWSMobileClient: 6af7fff9e58f8d427acf3381cbbae2f0c34d52ab
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c

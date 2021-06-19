@@ -1,6 +1,6 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'method_platform/method_channel_aws_session_platform.dart';
+import 'method_channel_aws_session_platform.dart';
 
 abstract class AwsSessionPlatform extends PlatformInterface {
   AwsSessionPlatform() : super(token: _token);

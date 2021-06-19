@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 
-import '../aws_session_platform_interface.dart';
+import 'aws_session_platform_interface.dart';
 
 class MethodChannelAwsSession extends AwsSessionPlatform {
   final MethodChannel channel = MethodChannel('aws_session');
